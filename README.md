@@ -11,8 +11,8 @@
 
 <b> 👨🏻‍🦱 (curly hair creative technologist)™ </b>
 
-- 🥑 I’m currently working as mobile developer and tech advocate, helping developers and communities grow-up.
-- ⚡️  I’m always burning circuits, mixing programming languages and trying to hack things.
+- 🥑 I’m currently working as mobile developer and teacher.
+- ⚡️ I’m always burning circuits, mixing programming languages and trying to hack things.
 - 🎓 I’m pursing my master degree in games development.
 - 💬 If you need something, will be a pleasure help you.
 - :computer: I've also been developing some side projects in web, mobile, games using unity3d, python/flask, reactjs, IoT/arduino stuff.
