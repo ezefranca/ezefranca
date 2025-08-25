@@ -1,0 +1,21 @@
+[👨🏻‍💻](https://ezefranca.com/timeline)
+- 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 25 of August of 2025.
+- 💼 Role: **Software Engineer** at [Miniclip](https://www.miniclip.com) - Play Games!
+
+
+
+
+> [!TIP]
+> Last tech posts:
+>  - [That post about bananas 🍌](https://ezefranca.com/blog/that-post-about-bananas-2025)
+>  - [Playing with Custom Modifiers in SwiftUI](https://ezefranca.com/blog/tech-playing-with-swiftui-modifiers-2021)
+>  - [Dealing with Premultiplied Alpha on iOS](https://ezefranca.com/blog/dealing-with-premultiplied-alpha-on-ios-2020)
+
+> [!NOTE]
+> Last personal updates:
+>  - [🇬🇧 Attended SEGAH 2025 in Manchester](https://ezefranca.com/news/academic-ieee-segah-2025)
+>  - [🇵🇹 Ciência 2025 – National Science Summit](https://ezefranca.com/news/academic-poster-ciencia-fct-2025)
+>  - [🎓 9th Symposium on Applied Research – IPCA](https://ezefranca.com/news/academic-poster-sar-ipca-2025)
+
+> <hr>
