@@ -1,0 +1,98 @@
+name: README
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'   # 00:00 UTC
+    - cron: '0 6 * * *'   # 00:00 UTC
+    
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Checkout private scripts repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ secrets.SCRIPTS_REPO_NAME }}
+          path: scripts
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install feedparser python-dateutil requests beautifulsoup4 cachetools tvtimewrapper markdown scholarly_publications stravalib
+
+      - name: Update README
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_API_SECRET: ${{ secrets.LASTFM_API_SECRET }}
+          OPEN_WEATHER_API: ${{ secrets.OPEN_WEATHER_API }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          TV_TIME_API_KEY: ${{ secrets.TV_TIME_API_KEY }}
+          TV_TIME_API_SECRET: ${{ secrets.TV_TIME_API_SECRET }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          NINTENDO_JSON_URL: ${{ secrets.NINTENDO_JSON_URL }}
+          LOCALE_URL: ${{ secrets.LOCALE_URL }}
+          HAPPY_COW_URL: ${{ secrets.HAPPY_COW_URL }}
+          OVERCAST_USERNAME: ${{ secrets.OVERCAST_USERNAME }}
+          OVERCAST_SECRET: ${{ secrets.OVERCAST_SECRET }}
+          OVERCAST_FALLBACK_URL: ${{ secrets.OVERCAST_FALLBACK_URL }}
+          SPEAKERDECK_URL: ${{ secrets.SPEAKERDECK_URL }}
+          SPEAKERDECK_USER_ID: ${{ secrets.SPEAKERDECK_USER_ID }}
+          GIT_NAME: ${{ secrets.GIT_NAME }}
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+          HEADERS_JSON: ${{ secrets.HEADERS_JSON }}
+
+        run: python scripts/scripts/main.py
+
+      - name: Check for any changes
+        id: git_diff
+        run: |
+          git fetch
+          if git diff --exit-code > /dev/null; then
+            echo "changes_detected=false" >> $GITHUB_ENV
+          else
+            echo "changes_detected=true" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and push if changed
+        if: env.changes_detected == 'true'
+        uses: antaljanosbenjamin/single-commit-publish@master
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          branch: main
+          source-dir: ${{ github.workspace }}
+          files-and-dirs: 'bio.json README.md .historical_bio publications.json .github .gitignore'
+          author-name: ${{ secrets.GIT_NAME }}
+          author-email: ${{ secrets.GIT_EMAIL }}
+          commit-message: '🤖 Updated README with latest stuff'
+
+  delete_old_workflow_runs:
+    runs-on: ubuntu-latest
+    needs: update_readme
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
