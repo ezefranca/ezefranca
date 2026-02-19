@@ -64,7 +64,7 @@ jobs:
         id: git_diff
         run: |
           git fetch
-          if git diff --exit-code > /dev/null; then
+          if git diff --exit-code > /dev/null && [ -z "$(git ls-files --others --exclude-standard .historical_bio/)" ]; then
             echo "changes_detected=false" >> $GITHUB_ENV
           else
             echo "changes_detected=true" >> $GITHUB_ENV
@@ -72,15 +72,13 @@ jobs:
 
       - name: Commit and push if changed
         if: env.changes_detected == 'true'
-        uses: antaljanosbenjamin/single-commit-publish@master
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          branch: main
-          source-dir: ${{ github.workspace }}
-          files-and-dirs: 'bio.json README.md .historical_bio publications.json .github .gitignore'
-          author-name: ${{ secrets.GIT_NAME }}
-          author-email: ${{ secrets.GIT_EMAIL }}
-          commit-message: '🤖 Updated README with latest stuff'
+        run: |
+          git config user.name "${{ secrets.GIT_NAME }}"
+          git config user.email "${{ secrets.GIT_EMAIL }}"
+          git add bio.json README.md publications.json .github .gitignore
+          git ls-files --others --exclude-standard .historical_bio/ | xargs -r git add
+          git commit -m '🤖 Updated README with latest stuff'
+          git push
 
   delete_old_workflow_runs:
     runs-on: ubuntu-latest
