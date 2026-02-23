@@ -10,7 +10,7 @@ Developing **Auctorium**, an Apple-native academic companion for researchers and
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 22 of February of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 23 of February of 2026.
 
 
 
