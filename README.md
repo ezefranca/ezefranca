@@ -9,7 +9,7 @@ Developing **Auctorium**, an Apple-native academic companion for researchers and
 ---
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
-- 🚫 Failed to fetch data from GitHub.
+- 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 03 of March of 2026.
 
 
