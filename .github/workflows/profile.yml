@@ -58,7 +58,8 @@ jobs:
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
           HEADERS_JSON: ${{ secrets.HEADERS_JSON }}
 
-        run: python scripts/scripts/main.py
+        run: |
+          python scripts/scripts/main.py || echo "::warning::Script exited with errors — one or more data sources may be unavailable. Committing any partial updates."
 
       - name: Check for any changes
         id: git_diff
