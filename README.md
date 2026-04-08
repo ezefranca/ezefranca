@@ -10,7 +10,7 @@ Developing **Auctorium**, an Apple-native academic companion for researchers and
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 07 of April of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Wednesday* on this 08 of April of 2026.
 
 
 
@@ -23,8 +23,8 @@ Developing **Auctorium**, an Apple-native academic companion for researchers and
 
 > [!NOTE]
 > Last personal updates:
+>  - [🍎 Selected for the WWDC26 Special Event at Apple Park](https://ezefranca.com/news/event-selected-for-wwdc26-special-event-apple-park-2026)
 >  - [🇵🇹 Officially a PhD Candidate](https://ezefranca.com/news/academic-phd-candidate-arguicao-2026)
 >  - [🌱 MDPI Foods Webinar — Rethinking Food Waste](https://ezefranca.com/news/course-mdpi-foods-webinar-rethinking-food-waste-2026)
->  - [🍎 Attended Apple's Foundation Models Workshop in Madrid](https://ezefranca.com/news/event-apple-foundation-models-workshop-madrid-2026)
 
 > <hr>
