@@ -2,14 +2,14 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Friday* on this 15 of May of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 16 of May of 2026.
 
 
 
 
 > [!TIP]
 > Last tech posts:
->  - [When in Doubt, Just Do It](https://ezefranca.com/blog/entry-2026)
+>  - [When in Doubt, Just Do It](https://ezefranca.com/blog/when-in-doubt-just-do-it-2026)
 >  - [Tim Cook](https://ezefranca.com/blog/tim-cook-2026)
 >  - [The Limits of Legibility](https://ezefranca.com/blog/the-limits-of-legibility-2026)
 
