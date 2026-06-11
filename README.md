@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Wednesday* on this 10 of June of 2026. 🇵🇹 **Portugal Day!**
+- 👋 **Hello!** Wishing you a wonderful *Thursday* on this 11 of June of 2026.
 
 
 
