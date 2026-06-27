@@ -15,8 +15,5 @@
 
 > [!NOTE]
 > Last personal updates:
->  - [🎤 Presenting at the RUN-EU Doctoral Symposium](https://ezefranca.com/news/presenting-run-eu-doctoral-symposium-2026)
->  - [🍎 Selected for the WWDC26 Special Event at Apple Park](https://ezefranca.com/news/event-selected-for-wwdc26-special-event-apple-park-2026)
->  - [🇵🇹 Officially a PhD Candidate](https://ezefranca.com/news/academic-phd-candidate-arguicao-2026)
 
 > <hr>
