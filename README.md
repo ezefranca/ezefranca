@@ -1,7 +1,7 @@
 ---
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
-- 🚫 Failed to fetch data from GitHub.
+- 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 30 of June of 2026.
 
 
