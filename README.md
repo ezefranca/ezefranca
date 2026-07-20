@@ -1,7 +1,7 @@
 ---
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
-- 🚫 Failed to fetch data from GitHub.
+- 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
 - 👋 **Hello!** Wishing you a wonderful *Monday* on this 20 of July of 2026. 🌕 **Moon Landing Day!**
 
 
