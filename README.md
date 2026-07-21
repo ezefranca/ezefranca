@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Monday* on this 20 of July of 2026. 🌕 **Moon Landing Day!**
+- 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 21 of July of 2026.
 
 
 
