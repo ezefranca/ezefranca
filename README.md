@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Wednesday* on this 12 of August of 2026. 👦 **International Youth Day!**
+- 👋 **Hello!** Wishing you a wonderful *Thursday* on this 13 of August of 2026.
 
 
 
