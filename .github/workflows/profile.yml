@@ -1,38 +1,62 @@
 name: README
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 * * *'   # 00:00 UTC
-    - cron: '0 6 * * *'   # 00:00 UTC
-    
+    - cron: '0 0 * * *' # Once daily at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-update
+  cancel-in-progress: true
+
 jobs:
   update_readme:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # This profile refresh is best-effort. Keep transient source failures from
+    # failing the workflow run and generating failure notifications.
+    continue-on-error: true
 
     steps:
       - name: Checkout main repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          # The historical archive contains thousands of JSON files and is not
+          # needed to generate today's profile.
+          sparse-checkout: |
+            .github
+            .gitignore
+            README.md
+            bio.json
+            publications.json
+          sparse-checkout-cone-mode: false
 
       - name: Checkout private scripts repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
         with:
           repository: ${{ secrets.SCRIPTS_REPO_NAME }}
           path: scripts
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v7
         with:
-          python-version: '3.x'
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: .github/readme-requirements.txt
 
       - name: Install Python dependencies
-        run: |
-          pip install feedparser python-dateutil requests beautifulsoup4 cachetools tvtimewrapper markdown scholarly_publications stravalib
+        run: >-
+          python -m pip install
+          --disable-pip-version-check
+          --no-input
+          --prefer-binary
+          --retries 1
+          --timeout 10
+          -r .github/readme-requirements.txt
 
       - name: Update README
         env:
@@ -57,41 +81,26 @@ jobs:
           GIT_NAME: ${{ secrets.GIT_NAME }}
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
           HEADERS_JSON: ${{ secrets.HEADERS_JSON }}
+        run: >-
+          python scripts/scripts/main.py ||
+          echo "::warning::One or more data sources were unavailable. Committing any partial updates."
 
-        run: |
-          python scripts/scripts/main.py || echo "::warning::Script exited with errors — one or more data sources may be unavailable. Committing any partial updates."
-
-      - name: Check for any changes
+      - name: Check for changes
         id: git_diff
         run: |
-          git fetch
-          if git diff --exit-code > /dev/null && [ -z "$(git ls-files --others --exclude-standard .historical_bio/)" ]; then
-            echo "changes_detected=false" >> $GITHUB_ENV
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard -- .historical_bio/)" ]; then
+            echo "changes_detected=false" >> "$GITHUB_OUTPUT"
           else
-            echo "changes_detected=true" >> $GITHUB_ENV
+            echo "changes_detected=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Commit and push if changed
-        if: env.changes_detected == 'true'
+        if: steps.git_diff.outputs.changes_detected == 'true'
         run: |
           git config user.name "${{ secrets.GIT_NAME }}"
           git config user.email "${{ secrets.GIT_EMAIL }}"
-          git add bio.json README.md publications.json .github .gitignore
-          git ls-files --others --exclude-standard .historical_bio/ | xargs -r git add
+          git add --sparse -- bio.json README.md publications.json
+          git ls-files --others --exclude-standard -z -- .historical_bio/ | xargs -0 -r git add --sparse --
+          git diff --cached --quiet && exit 0
           git commit -m '🤖 Updated README with latest stuff'
           git push
-
-  delete_old_workflow_runs:
-    runs-on: ubuntu-latest
-    needs: update_readme
-    permissions:
-      actions: write
-      contents: read
-    steps:
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0

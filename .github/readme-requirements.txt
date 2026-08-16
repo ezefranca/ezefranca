@@ -1,0 +1,9 @@
+beautifulsoup4
+cachetools
+feedparser
+markdown
+python-dateutil
+requests
+scholarly_publications
+stravalib
+tvtimewrapper
