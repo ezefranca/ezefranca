@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Monday* on this 17 of August of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 18 of August of 2026.
 
 
 
