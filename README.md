@@ -20,3 +20,11 @@
 >  - [🇵🇹 Officially a PhD Candidate](https://ezefranca.com/news/academic-phd-candidate-arguicao-2026)
 
 > <hr>
+
+#### Apps
+
+<p>
+<a href="https://citatum.ezequiel.app/download/website/"><img src="https://citatum.ezequiel.app/assets/appicon.png" alt="Citatum app icon" width="28" height="28" align="left"></a>
+<strong><a href="https://citatum.ezequiel.app/download/website/">Citatum</a></strong><br>
+<sub>Your papers, citations, and academic progress in one clear view.</sub>
+</p>
