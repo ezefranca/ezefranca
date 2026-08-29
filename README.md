@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Friday* on this 28 of August of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 29 of August of 2026.
 
 
 
@@ -28,3 +28,4 @@
 <strong><a href="https://citatum.ezequiel.app/download/website/">Citatum</a></strong><br>
 <sub>Your papers, citations, and academic progress in one clear view.</sub>
 </p>
+
