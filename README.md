@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Monday* on this 31 of August of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 01 of September of 2026.
 
 
 
@@ -15,9 +15,9 @@
 
 > [!NOTE]
 > Last personal updates:
+>  - [🇧🇷 Paper published at IEEE SeGAH 2026](https://ezefranca.com/news/paper-at-segah-2026)
 >  - [🎤 Presenting at the RUN-EU Doctoral Symposium](https://ezefranca.com/news/presenting-run-eu-doctoral-symposium-2026)
 >  - [🍎 Selected for the WWDC26 Special Event at Apple Park](https://ezefranca.com/news/event-selected-for-wwdc26-special-event-apple-park-2026)
->  - [🇵🇹 Officially a PhD Candidate](https://ezefranca.com/news/academic-phd-candidate-arguicao-2026)
 
 > <hr>
 
