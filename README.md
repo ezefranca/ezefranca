@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 20 of September of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 21 of September of 2026. 📚 **International Day of Peace!**
 
 
 
