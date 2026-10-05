@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 04 of October of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 05 of October of 2026. 🇵🇹 **Republic Day!**
 
 
 
