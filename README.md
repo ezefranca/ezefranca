@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 31 of October of 2026. 🎃 **Happy Halloween!**
+- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 01 of November of 2026.
 
 
 
