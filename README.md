@@ -2,7 +2,7 @@
 
 [👨🏻‍💻](https://ezefranca.com/timeline)
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, developer and creative technologist
-- 👋 **Hello!** Wishing you a wonderful *Thursday* on this 19 of November of 2026.
+- 👋 **Hello!** Wishing you a wonderful *Friday* on this 20 of November of 2026. 🔬 **World Science Day for Peace and Development!**
 
 
 
